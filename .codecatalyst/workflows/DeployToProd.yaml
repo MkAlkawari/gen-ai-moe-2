@@ -39,6 +39,6 @@ Actions:
       Fleet: Linux.x86-64.Large
     Environment:
       Connections:
-        - Role: CodeCatalystWorkflowDevelopmentRole-moe-ielts-phase2
-          Name: "664418980468"
+        - Role: CodeCatalystWorkflowDevelopmentRole-iGA_Projects
+          Name: "600627328431"
       Name: Prod
