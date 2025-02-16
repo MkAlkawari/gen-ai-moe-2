@@ -45,10 +45,13 @@ graphlambdafunction.addEnvironment('RECORDS_TABLE', table.tableName);
 graphlambdafunction.addEnvironment('USERDATA_TABLE', userdataTable.tableName);
 
 
-  const uploads_bucket = new Bucket(stack, 'Uploads');
+  const uploads_bucket = new Bucket(stack, 'Uploads', {blockPublicACLs: true,
+  });
   
-  const Polly_bucket = new Bucket(stack, 'Polly');
-  const audiobucket = new Bucket(stack, 'listeningAudios');
+  const Polly_bucket = new Bucket(stack, 'Polly',{blockPublicACLs: true,
+  });
+  const audiobucket = new Bucket(stack, 'listeningAudios',{blockPublicACLs: true,
+  });
   const speakingPollyBucket = s3.Bucket.fromBucketAttributes(
     this,
     'speakingPolly',
